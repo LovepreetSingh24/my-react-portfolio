@@ -1,26 +1,29 @@
 import React from 'react';
+import { Container, Form, Button } from 'react-bootstrap';
 
 function Contact() {
-    return (
-        <div className="container">
-            <h1 className="mt-5">Contact Me</h1>
-            <form>
-                <div className="mb-3">
-                    <label htmlFor="name" className="form-label">Name:</label>
-                    <input type="text" className="form-control" id="name" name="name" required />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email:</label>
-                    <input type="email" className="form-control" id="email" name="email" required />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="message" className="form-label">Message:</label>
-                    <textarea className="form-control" id="message" name="message" rows="3" required></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary">Send</button>
-            </form>
-        </div>
-    );
+  return (
+    <Container>
+      <h2 className="mt-5">Contact</h2>
+      <Form>
+        <Form.Group className="mb-3" controlId="contactForm.Name">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter your name" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="contactForm.Email">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter your email" />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="contactForm.Message">
+          <Form.Label>Message</Form.Label>
+          <Form.Control as="textarea" rows={3} />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Send
+        </Button>
+      </Form>
+    </Container>
+  );
 }
 
 export default Contact;

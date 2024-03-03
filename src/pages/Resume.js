@@ -1,21 +1,21 @@
 import React from 'react';
+import { Container, Button } from 'react-bootstrap';
 
 function Resume() {
-    return (
-        <div className="container">
-            <h1 className="mt-5">Resume</h1>
-            <p>
-                <a href="path/to/your_resume.pdf" className="btn btn-primary" target="_blank" rel="noopener noreferrer">Download My Resume</a>
-            </p>
-            <h2>Proficiencies</h2>
-            <ul>
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-            </ul>
-        </div>
-    );
+  return (
+    <Container>
+      <h2 className="mt-5">Resume</h2>
+      <p>You can download my resume from the link below.</p>
+      <Button variant="primary" href="path/to/your_resume.pdf" target="_blank">Download Resume</Button>
+      <h3 className="mt-4">Proficiencies</h3>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React</li>
+        <li>Node.js</li>
+      </ul>
+    </Container>
+  );
 }
 
 export default Resume;
